@@ -1,3 +1,3 @@
 export const config = {
-    token: process.env.BOT_TOKEN
+  token: process.env.BOT_TOKEN,
 };
