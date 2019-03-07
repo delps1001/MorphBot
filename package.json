@@ -22,6 +22,7 @@
     "start": "npm run prepare && node ."
   },
   "devDependencies": {
+    "@types/koa": "^2.0.48",
     "gts": "^1.0.0-0",
     "typescript": "~3.3.0"
   },
@@ -29,6 +30,7 @@
     "@discordjs/uws": "^11.149.1",
     "@types/node": "^11.10.5",
     "discord.js": "^11.4.2",
-    "erlpack": "github:discordapp/erlpack"
+    "erlpack": "github:discordapp/erlpack",
+    "koa": "^2.7.0"
   }
 }
