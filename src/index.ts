@@ -13,12 +13,14 @@ client.on('message', msg => {
   }
 });
 
-client.login(config.token).then(string => {
-    console.info(string);
-}).catch( error => {
+client
+  .login(config.token)
+  .then(strings => {
+    console.info(strings);
+  })
+  .catch(error => {
     console.error(error);
-});
-
+  });
 
 const app: Koa = new Koa();
 const server = app.listen(process.env.PORT || 3995);
