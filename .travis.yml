@@ -10,11 +10,11 @@ env:
     - SKIP_INSTALL=true
     # BLUEMIX_API_KEY
     - secure: "b6BFukiS2aengzkuimjDEilUq1Kx10Tea/Ru9VrK/zXiurFKE7yfP0DeyHsMlkBtjp4VD+a6S5qvOzquEA8tUc2v3yeQIpNW+mUcf/kjGMxKtbiFvLHrSRmC2jLTKjc3KCNPI136Cl7+kdK1AAo1pcv95EvO9igFz56OchB3gmr+aUMDc9pn5EEi6d/r97nYAnlPWagTFbJZwTzoEvmhVSD21cCQdA/C4sWrzs5t37FBKc56qJ3ZfhP9cm4LwmDaf9EQMjMBia/qBEv2Hidns1HUD+PlIJxxlidiMfZuHSCgSh5ldl3j6Or/Vjr1BMgd6QHgsnKAwhHyVZZ3WEU8Z7Tw8qvMk/kVozjpttKinZl/wMoyA3lU5ogNpO3wQ74p7kRhA7WlVEuv5P5aXtUrHQVyUjk62MkGnf4ebaDDIOQ7HWHr4hprL9r2SQrsiQSYlthr5W0raEtceLLaHsH4Me1KNIwlluAcOVUjoh8CEXcf3zQ0/gkr+h+tRLVDMa0ldaDy3SO3FEL0GHZ92etyQYEd1539ehuEHhpC2NPxwCAhCp+WbzR1NGb7WB++4G6SRXIm9nfQiQTyXD72WI5RA63x+5KF+TrUDvsAtVzsSdB8Vb1tWzm95iT6RZOaSsYBE12Xl+nwAtchUZmjRdtTFw7aAdbMdhhe9QEXvnP/Cs4="
-    - CF_REGION=us-south
-    - CF_SPACE=dev
-    - CF_TARGET=https://api.ng.bluemix.net
+    - CF_REGION=us-east
+    - CF_SPACE=morph
+    - CF_TARGET=https://api.us-east.bluemix.net
     - CF_DOMAIN=us-east.mybluemix.net
-    - APP_NAME=morph_bot
+    - APP_NAME=morphbot
     - CF_ENV_PREFIX=^MORPH_BOT_
     # MORPH_BOT_BOT_TOKEN
     - secure: "E4ziFuxKCQSfq3kqUZd6a+PMDqLlYAbzU+7CImsO4/pCBao0jk1rpt0H1VlGTb1/0ebFbc2VwHDV40BpOKUtt89S4ok9UbKUsXrcEAUzaBuDbJzX5JaRkE5WhAzpV5DrIQ72vLqBQT7VrABVIewYeYmUGWcqdZ8DuoOz9Uc8vIrjXg3hjmMJthLCdjGcNTaunZ7KQ9vzIE4c6zjS5nzIUmQHGMgF542ywasppcVLt0gL6QKNjD2Vva1gtkCsp7gQ57Jwe7ssXprHUGHjESGVyiRMZKqo68aLRJlwGDF3HtYUJhOJQr7lZyLW0ePn/UTCNj6gR3/sHESf3tIOMkfs+t61R5sog9XX7AZECM8uytYwXIfQN9R1BQ9rbLSIHtstB//IkesOP+2vtL8qM3AgDwqAojwfReT+iilU/QLKVgz7ClxchMYYOCJMM2+IklR0VWznKfsgKOLhf8E4mhoTzZCZ4JPyMFJDnTprdb5TI6C0nob9yTXzbEMUeXgVhfeeDWNvEnKlToHLGYG1HusLKkUAzVYRKNhpQDMd95uB8B9H/2a3Cuk/8jDy/PZPbBfNB8vl6jMdi9F6jE11HSlk7vyBbhdLDIQZHXKEnokwxjIqo4ZA/yixLS9skqFjNE9RD30hwN5B/tIDZGspOY4ho6w0cqdgBq0V/HwDqoRmQrk="
