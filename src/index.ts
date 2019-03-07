@@ -7,7 +7,11 @@ client.on('ready', () => {
   console.info(`Logged in as ${client.user.tag}`);
 });
 
-client.on('message', msg => {
+client.on('message', async msg => {
+  const admin = await client.fetchUser(config.admin);
+  if (msg.author.equals(admin)) {
+    msg.reply('hello, I love you');
+  }
   if (msg.content === 'ping') {
     msg.reply('pong');
   }
