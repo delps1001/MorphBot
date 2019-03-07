@@ -1,7 +1,8 @@
 {
-  "name": "",
+  "name": "morphguessbot",
+  "repository": "https://github.com/delps1001/MorphGuessBot",
   "version": "0.0.0",
-  "description": "",
+  "description": "Bot to play the morph guess game!",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "files": [
@@ -17,10 +18,17 @@
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run check"
+    "posttest": "npm run check",
+    "start": "npm run prepare && node ."
   },
   "devDependencies": {
     "gts": "^1.0.0-0",
     "typescript": "~3.3.0"
+  },
+  "dependencies": {
+    "@discordjs/uws": "^11.149.1",
+    "@types/node": "^11.10.5",
+    "discord.js": "^11.4.2",
+    "erlpack": "github:discordapp/erlpack"
   }
 }

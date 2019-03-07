@@ -1,0 +1,23 @@
+deploy:
+- provider: s3
+  access_key_id: AKIAJOGIGHWUTLFZBTXQ
+  secret_access_key: &1
+    secure: s2bOpS7iniXSkweqHyQH0JDFts+UMFdjK8nTlPGiVEYGl3Xrq3/kqccPz8f7xYmLs8gB3USD4xrT7vvnq76MUXWdVpEwh0/czhEGYBIPuIfbhsUOCgRvL4iiJ4TR+F5xZ5qaVlkH1C4FHTAMVVyQbVb7M424wo9GzmhyfW8KgQgyz5vK0FA+O2UYb4kbzqHjy09t8ApJSuYiNSQs9EVSmBJ568cIsjiC9DionoVc/qXQRBrWJ83onzLSt34VgmWelh2M6/Rca9DdRw3/2tuxsQs3WE1nY6nS0jKzcEZeBqUWb8fPhqEK8gVQ9HUNF17hTjn4Xqqlb2IQ/KWLGBQjfHRrxXZ7P6AYxB0X5+Q4HtXYwpRw4Enl1PGVEzYsHvwuryCBLxg8JHbIDZ9Ms9dga3f2Cs8127p/6/EVA5nF5ukgeBaAB9xaGGH0BpsUqwjyY8LV61AqwH0rKXX/oMB2aqrBPiS9dB9XTgQ8n3cd8n92IqS6tA4KXoXkHueVObX9QlwwU1ul6opjlGmkBMEThluxrx0nEDACoQmn00QlB01VwZn9s9dGnvmMJc5dcuBKTwvk6uceWuK2xK3skvuHJINGvjTrmmxyMUQI5s5+jvs/GliN3frmwOyMze6yp8X8FA8Vx8ZY08YwavT5bh+ESSQmFjxFDLYjH+FVGmWQpO0=
+  local_dir: dpl_cd_upload
+  skip_cleanup: true
+  on: &2
+    repo: delps1001/MorphGuessBot
+  bucket: S3 Bucket
+  upload_dir: latest
+- provider: codedeploy
+  access_key_id: AKIAJOGIGHWUTLFZBTXQ
+  secret_access_key: *1
+  bucket: S3 Bucket
+  key: latest/MorphGuessBot.zip
+  bundle_type: zip
+  application: MorphGuessBot
+  deployment_group: MorphGuess
+  on: *2
+before_deploy:
+- mkdir -p dpl_cd_upload
+- mv MorphGuessBot.zip dpl_cd_upload/MorphGuessBot.zip
