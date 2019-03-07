@@ -8,10 +8,16 @@ client.on('ready', () => {
 });
 
 client.on('message', async msg => {
-  const admin = await client.fetchUser(config.admin);
-  if (msg.author.equals(admin)) {
-    msg.reply('hello, I love you');
+  try {
+    console.info(config.admin);
+    const admin = await client.fetchUser(config.admin);
+    if (msg.author.equals(admin)) {
+      msg.reply('hello, I love you');
+    }
+  } catch (error) {
+    console.error(error);
   }
+
   if (msg.content === 'ping') {
     msg.reply('pong');
   }

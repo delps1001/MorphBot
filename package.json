@@ -32,5 +32,9 @@
     "discord.js": "^11.4.2",
     "erlpack": "github:discordapp/erlpack",
     "koa": "^2.7.0"
+  },
+  "engines": {
+    "node": "v10.15.3",
+    "npm": "6.4.1"
   }
 }
