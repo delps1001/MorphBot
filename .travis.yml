@@ -1,24 +1,27 @@
 language: node_js
+node_js: 8.15.1
+dist: trusty
+
+env:
+  global:
+    # CF_ORG
+    - secure: "ocnvpqXle8SOUoAvpG7XKyipCtbAuiHUHc7JLbodd3EvgMTbVgchLdl2rg8FzF4sW/ymQaAEhFhUClqn1y54JSOFKltbf1Rp1cVKY8BkC58WNzKKxnciF9LR3iHBfKj6rGMhgM2n7uqgeYuM7jnqercehrKFlhYbc7l/+wSshWjoJ7kfCsnzWmomVO6qgahYkKHqVV+dY0/YB0sPys4fuHt/SmGJU5FD7IyvNlnqydURVywolk99CL+wCJFgEx4VvAVBtJAiuC6jqWr07JRYDoAGmtU9MOTrEv41GX/8Hz+mEJWJso7cVstddUccn1Ndw9pqkEm54DBmzMUsv02HIgf3hv7UOUngM0hycG57ns6taClb/Ne+G4s4O33A/5BDEi0VaAg2SWmScoK3/Aee+eCgkIaLWYI/ASsOZhuZOc2/JaJSLBlvEHfuP5T9gtWSWFiQpZr99LfdQXas9umWBpY/U9airsLuGhLfVbYreYANxjzgv9wfZCfw2VhLPWPJEp8xhUcZkQweJ/0S4pTst2yhxzMRJVjKi+6nqxmEgnie6be+413GSiy2XwfzT9sypXLxuxO6aOUcZ+3OQb9/wGnBe4TwNAV8f9snAWuSz2hbEpi6+HABQZjbtGV9yUckjTexXKDhm2yCDGnWa9gh/w03otdXpF7po/w1sjW8F2w="
+    - INTEGRATION_TEST="echo 'TODO integration tests'"
+    - SKIP_INSTALL=true
+    # BLUEMIX_API_KEY
+    - secure: "b6BFukiS2aengzkuimjDEilUq1Kx10Tea/Ru9VrK/zXiurFKE7yfP0DeyHsMlkBtjp4VD+a6S5qvOzquEA8tUc2v3yeQIpNW+mUcf/kjGMxKtbiFvLHrSRmC2jLTKjc3KCNPI136Cl7+kdK1AAo1pcv95EvO9igFz56OchB3gmr+aUMDc9pn5EEi6d/r97nYAnlPWagTFbJZwTzoEvmhVSD21cCQdA/C4sWrzs5t37FBKc56qJ3ZfhP9cm4LwmDaf9EQMjMBia/qBEv2Hidns1HUD+PlIJxxlidiMfZuHSCgSh5ldl3j6Or/Vjr1BMgd6QHgsnKAwhHyVZZ3WEU8Z7Tw8qvMk/kVozjpttKinZl/wMoyA3lU5ogNpO3wQ74p7kRhA7WlVEuv5P5aXtUrHQVyUjk62MkGnf4ebaDDIOQ7HWHr4hprL9r2SQrsiQSYlthr5W0raEtceLLaHsH4Me1KNIwlluAcOVUjoh8CEXcf3zQ0/gkr+h+tRLVDMa0ldaDy3SO3FEL0GHZ92etyQYEd1539ehuEHhpC2NPxwCAhCp+WbzR1NGb7WB++4G6SRXIm9nfQiQTyXD72WI5RA63x+5KF+TrUDvsAtVzsSdB8Vb1tWzm95iT6RZOaSsYBE12Xl+nwAtchUZmjRdtTFw7aAdbMdhhe9QEXvnP/Cs4="
+    - CF_REGION=us-east
+    - CF_SPACE=dev
+    - CF_TARGET=https://api.us-east.bluemix.net
+    - CF_DOMAIN=us-east.mybluemix.net
+    - APP_NAME=morph_bot
+    - CF_ENV_PREFIX=^MORPH_BOT
+    - # MORPH_BOT_BOT_TOKEN
+    - secure: "E4ziFuxKCQSfq3kqUZd6a+PMDqLlYAbzU+7CImsO4/pCBao0jk1rpt0H1VlGTb1/0ebFbc2VwHDV40BpOKUtt89S4ok9UbKUsXrcEAUzaBuDbJzX5JaRkE5WhAzpV5DrIQ72vLqBQT7VrABVIewYeYmUGWcqdZ8DuoOz9Uc8vIrjXg3hjmMJthLCdjGcNTaunZ7KQ9vzIE4c6zjS5nzIUmQHGMgF542ywasppcVLt0gL6QKNjD2Vva1gtkCsp7gQ57Jwe7ssXprHUGHjESGVyiRMZKqo68aLRJlwGDF3HtYUJhOJQr7lZyLW0ePn/UTCNj6gR3/sHESf3tIOMkfs+t61R5sog9XX7AZECM8uytYwXIfQN9R1BQ9rbLSIHtstB//IkesOP+2vtL8qM3AgDwqAojwfReT+iilU/QLKVgz7ClxchMYYOCJMM2+IklR0VWznKfsgKOLhf8E4mhoTzZCZ4JPyMFJDnTprdb5TI6C0nob9yTXzbEMUeXgVhfeeDWNvEnKlToHLGYG1HusLKkUAzVYRKNhpQDMd95uB8B9H/2a3Cuk/8jDy/PZPbBfNB8vl6jMdi9F6jE11HSlk7vyBbhdLDIQZHXKEnokwxjIqo4ZA/yixLS9skqFjNE9RD30hwN5B/tIDZGspOY4ho6w0cqdgBq0V/HwDqoRmQrk="
 deploy:
-- provider: s3
-  access_key_id: AKIAJOGIGHWUTLFZBTXQ
-  secret_access_key: &1
-    secure: s2bOpS7iniXSkweqHyQH0JDFts+UMFdjK8nTlPGiVEYGl3Xrq3/kqccPz8f7xYmLs8gB3USD4xrT7vvnq76MUXWdVpEwh0/czhEGYBIPuIfbhsUOCgRvL4iiJ4TR+F5xZ5qaVlkH1C4FHTAMVVyQbVb7M424wo9GzmhyfW8KgQgyz5vK0FA+O2UYb4kbzqHjy09t8ApJSuYiNSQs9EVSmBJ568cIsjiC9DionoVc/qXQRBrWJ83onzLSt34VgmWelh2M6/Rca9DdRw3/2tuxsQs3WE1nY6nS0jKzcEZeBqUWb8fPhqEK8gVQ9HUNF17hTjn4Xqqlb2IQ/KWLGBQjfHRrxXZ7P6AYxB0X5+Q4HtXYwpRw4Enl1PGVEzYsHvwuryCBLxg8JHbIDZ9Ms9dga3f2Cs8127p/6/EVA5nF5ukgeBaAB9xaGGH0BpsUqwjyY8LV61AqwH0rKXX/oMB2aqrBPiS9dB9XTgQ8n3cd8n92IqS6tA4KXoXkHueVObX9QlwwU1ul6opjlGmkBMEThluxrx0nEDACoQmn00QlB01VwZn9s9dGnvmMJc5dcuBKTwvk6uceWuK2xK3skvuHJINGvjTrmmxyMUQI5s5+jvs/GliN3frmwOyMze6yp8X8FA8Vx8ZY08YwavT5bh+ESSQmFjxFDLYjH+FVGmWQpO0=
-  local_dir: dpl_cd_upload
+  provider: script
   skip_cleanup: true
-  on: &2
-    repo: delps1001/MorphGuessBot
-  bucket: S3 Bucket
-  upload_dir: latest
-- provider: codedeploy
-  access_key_id: AKIAJOGIGHWUTLFZBTXQ
-  secret_access_key: *1
-  bucket: S3 Bucket
-  key: latest/MorphGuessBot.zip
-  bundle_type: zip
-  application: MorphGuessBot
-  deployment_group: MorphGuess
-  on: *2
-before_deploy:
-- mkdir -p dpl_cd_upload
-- mv MorphGuessBot.zip dpl_cd_upload/MorphGuessBot.zip
+  script: "./bin/deploy_to_bluemix.sh"
+  on:
+    branch: master
+
