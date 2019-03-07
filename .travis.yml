@@ -13,7 +13,7 @@ env:
     - CF_REGION=us-south
     - CF_SPACE=dev
     - CF_TARGET=https://api.ng.bluemix.net
-    - CF_DOMAIN=us-south.mybluemix.net
+    - CF_DOMAIN=us-east.mybluemix.net
     - APP_NAME=morph_bot
     - CF_ENV_PREFIX=^MORPH_BOT_
     # MORPH_BOT_BOT_TOKEN
