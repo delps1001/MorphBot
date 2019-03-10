@@ -18,7 +18,7 @@ export class MessageHandler {
       GuessContextHandler.correctAnswer = null;
     }
 
-    if (messageContent.startsWith('!isTodd\'sIronmanBanned')) {
+    if (messageContent.startsWith("!isTodd'sIronmanBanned")) {
       return 'Yes.';
     }
   }
