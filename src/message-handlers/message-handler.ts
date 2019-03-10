@@ -17,5 +17,9 @@ export class MessageHandler {
     if (messageContent.startsWith('!clearGuess') && isAdmin) {
       GuessContextHandler.correctAnswer = null;
     }
+
+    if (messageContent.startsWith('!isTodd\'sIronmanBanned')) {
+      return 'Yes.';
+    }
   }
 }
