@@ -23,15 +23,19 @@
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
+    "@types/node": "^11.10.5",
     "gts": "^1.0.0-0",
     "typescript": "~3.3.0"
   },
   "dependencies": {
     "@discordjs/uws": "^11.149.1",
-    "@types/node": "^11.10.5",
+    "@types/request-promise-native": "^1.0.15",
     "discord.js": "^11.4.2",
     "erlpack": "github:discordapp/erlpack",
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "node-cache": "^4.2.0"
   },
   "engines": {
     "node": "v10.15.3",

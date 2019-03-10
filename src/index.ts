@@ -12,7 +12,7 @@ client.on('message', async msg => {
   try {
     const admin = await client.fetchUser(config.admin);
     const isAdmin = msg.author.equals(admin);
-    const response = MessageHandler.handleMessage(msg.content, isAdmin);
+    const response = await MessageHandler.handleMessage(msg.content, isAdmin);
     if (response) {
       msg.reply(response);
     }

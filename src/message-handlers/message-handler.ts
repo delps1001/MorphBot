@@ -1,11 +1,12 @@
 import { GuessHandler } from './guess-handler';
 import { GuessContextHandler } from './guess-context-handler';
+import { PriceHandler } from './price-handler';
 
 export class MessageHandler {
-  static handleMessage(
+  static async handleMessage(
     messageContent: string,
     isAdmin: boolean
-  ): string | void {
+  ): Promise<string | void> {
     if (messageContent.startsWith('!guess')) {
       return GuessHandler.handleGuess(messageContent);
     }
@@ -20,6 +21,10 @@ export class MessageHandler {
 
     if (messageContent.startsWith("!isTodd'sIronmanBanned")) {
       return 'Yes.';
+    }
+
+    if (messageContent.startsWith('!price')) {
+      return PriceHandler.handlePrice(messageContent);
     }
   }
 }
