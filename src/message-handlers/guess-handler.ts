@@ -7,7 +7,7 @@ export class GuessHandler {
   static handleGuess(guess: string): string {
     if (!this.validateGuess(guess)) {
       return `Invalid !guess command format, it must be of the form "${
-        this.validSetGuess
+        this.validGuess
       }"`;
     }
 
