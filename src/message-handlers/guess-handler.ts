@@ -37,9 +37,7 @@ export class GuessHandler {
     console.info(GuessContextHandler.correctAnswer);
     console.info(GuessContextHandler.correctAnswer.length);
     if (numCorrect === GuessContextHandler.correctAnswer.length) {
-      const response = `We have a winner, congratulations! The correct answer was: ${
-        GuessContextHandler.correctAnswer
-      }`;
+      const response = `We have a winner, congratulations! The correct answer was: ${GuessContextHandler.correctAnswer}`;
       GuessContextHandler.correctAnswer = null;
       return response;
     }
@@ -49,9 +47,7 @@ export class GuessHandler {
 
   static handleAdminSetGuess(messageContent: string): string {
     if (!this.validateSetGuess(messageContent)) {
-      return `Invalid !setGuess command format, it must be of the form "${
-        this.validSetGuess
-      }"`;
+      return `Invalid !setGuess command format, it must be of the form "${this.validSetGuess}"`;
     }
     const splitMessage = messageContent.trim().split(' ');
     const splitMessageLower = [];

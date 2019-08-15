@@ -9,9 +9,7 @@ export class PriceHandler {
 
   static async handlePrice(messageContent: string): Promise<string> {
     if (!this.validateMessagePriceSyntax(messageContent)) {
-      return `Invalid !price command format, it must be of the form "${
-        this.correctFormat
-      }"`;
+      return `Invalid !price command format, it must be of the form "${this.correctFormat}"`;
     }
     const itemName = this.extractItemName(messageContent);
     let osbResponse = this.nodeCache.get(
